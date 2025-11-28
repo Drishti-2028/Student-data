@@ -1,0 +1,36 @@
+import csv
+
+# 5 column headers
+headers = ["StudentID", "Name", "Age", "Department", "Grade"]
+
+# 20 rows of sample student data
+rows = [
+    ["S101", "Aarav", 18, "CSE", "A"],
+    ["S102", "Diya", 19, "ECE", "B"],
+    ["S103", "Kabir", 18, "ME", "A"],
+    ["S104", "Isha", 20, "CSE", "A"],
+    ["S105", "Vivaan", 19, "IT", "C"],
+    ["S106", "Riya", 18, "CSE", "B"],
+    ["S107", "Atharv", 20, "AI", "A"],
+    ["S108", "Anaya", 21, "ECE", "A"],
+    ["S109", "Arjun", 19, "EE", "B"],
+    ["S110", "Sara", 20, "CSE", "A"],
+    ["S111", "Ishaan", 18, "AI", "A"],
+    ["S112", "Priya", 19, "IT", "C"],
+    ["S113", "Advait", 21, "ME", "B"],
+    ["S114", "Kritika", 20, "ECE", "A"],
+    ["S115", "Reyansh", 18, "CSE", "A"],
+    ["S116", "Meera", 22, "AI", "B"],
+    ["S117", "Shaurya", 19, "IT", "C"],
+    ["S118", "Tara", 20, "ME", "A"],
+    ["S119", "Kian", 18, "CSE", "A"],
+    ["S120", "Myra", 21, "AI", "B"],
+]
+
+# Creating the CSV file
+with open("student_details.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(headers)
+    writer.writerows(rows)
+
+print("CSV created successfully!")
